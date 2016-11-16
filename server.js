@@ -40,7 +40,7 @@ app.post('/incidents', function(req, res) {
     if (err) {
       res.status(500).send(err);
     } else {
-      res.json(incidents);
+      setTimeout(function(){res.json(incidents);}, 100);
     }
   });
   console.log('POST /incidents');
